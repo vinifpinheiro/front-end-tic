@@ -1,0 +1,111 @@
+@import "../../styles/variables";
+
+.logo__img{
+    background-color:$component--color;
+    border-radius: 0px 0px 120px 0px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: 220px;
+    height: 210px;
+}
+
+.text__h1{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 52px;
+    font-family: $font--title;
+    display: flex;
+    justify-content: center;
+}
+
+.text__h2{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 52px;
+    font-family: $font--title;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome__texts{
+    position: relative;
+    bottom: 80px;
+    color: $color--text;
+}
+
+.login__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.label__name{
+    font-family: $font--text;
+    font-weight: 400;
+    font-size: 28px;
+    padding-bottom: 5px;
+    color: $color--text;
+}
+
+.label__password{
+    font-family: $font--text;
+    font-weight: 400;
+    font-size: 28px;
+    padding-bottom: 5px; 
+    color: $color--text;
+}
+
+.input__name{
+    background-color:$component--color ;
+    height: 50px;
+    width: 260px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: $font--text;
+}
+
+.input__name:focus {
+    outline: none;
+  }
+
+.input__password{
+    background-color:$component--color ;
+    height: 50px;
+    width: 260px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: $font--text;
+    margin-bottom: 80px;
+}
+
+.input__password:focus {
+    outline: none;
+}
+
+.button__form{
+    background-color: $component--color;
+    border: none;
+    width: 100px;
+    height: 60px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: $font--title;
+    font-size: 24px;
+    color: $color--text;
+    cursor: pointer;
+}
+.button__form:hover{
+    background-color: $background--header;
+}
