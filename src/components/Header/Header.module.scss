@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+
+.header__menu{
+    background-color: $background--header;
+    height: 70px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.logo__storage{
+    position: relative;
+    bottom: 26px;
+}

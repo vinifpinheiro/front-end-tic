@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.button__logout{
+    color: $color--text;
+    background: none;
+    cursor: pointer;
+    border: none;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 65px;
+}
+
+.image__background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image__fill{
+    opacity: 10%;
+}
