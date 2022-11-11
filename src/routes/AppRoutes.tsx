@@ -1,11 +1,11 @@
-import { BrowserRouter as Router , Routes , Route, Navigate } from "react-router-dom"
+import { BrowserRouter as Router , Routes , Route} from "react-router-dom"
 import { LoginPage } from "../pages/LoginPage"
 import '../styles/reset.css'
 import "../styles/global.scss"
 import { MenuPage } from "../pages/Private/MenuPage"
-import { useContext } from "react"
-import { Header } from "../components/Header"
 import { RegisterPage } from "../pages/Private/RegisterPage"
+import { RegisterProductPage } from "../pages/Private/RegisterPage/RegisterProductPage"
+
 
 export const AppRoutes = () => {
     // const Private = ({ children }: { children: any }) => {
@@ -37,10 +37,12 @@ export const AppRoutes = () => {
                     path="/register"
                     element={<RegisterPage/>}
                 />
+                <Route
+                    path="/register/product"
+                    element={<RegisterProductPage/>}
+                />
             </Routes>
-            <Routes>
-                
-            </Routes>
+            
         </Router>
     )
 }

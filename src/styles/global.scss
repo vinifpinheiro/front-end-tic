@@ -2,4 +2,15 @@
 
 body{
     background-color: $background--color;
+    background-image: url("../assets/images/Icon-Storage.png"), ;
+    background-size: 300px;
+    background-position-x: 630px;
+    background-position-y: 300px;
+    opacity: 100%;
+    left: 90px;
+    background-repeat: no-repeat;
+}
+
+body::before{
+    opacity: 0.6;
 }

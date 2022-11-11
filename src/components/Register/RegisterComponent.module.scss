@@ -1,2 +1,71 @@
 @import "../../styles/variables";
 
+.h1__register{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 45px;
+}
+
+.h1__content{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+
+    font-family: $font--title;
+    font-size: 24px;
+    color: $color--text;
+}
+
+.ul__menu{
+    display: flex;
+    width: 400px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: $background--header;
+    border-radius: 80px;
+}
+
+.menu__register{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 24px;
+}
+
+.li__demand{
+    padding-right: 55px;
+    padding-left: 85px;
+    text-decoration: none;
+}
+
+.li__menu{
+    font-size: 20px;
+    font-family: $font--title;
+    color: $color--text;
+    text-decoration: none;
+}
+
+.li__menu:hover{
+    text-decoration: underline;
+}
+
+.button__back{
+    color: $color--text;
+    background: none;
+    cursor: pointer;
+    border: none;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button__register{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 150px;
+}

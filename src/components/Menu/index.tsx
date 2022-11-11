@@ -1,5 +1,4 @@
 import styles from './MenuComponent.module.scss'
-import Logo from '../../assets/images/Icon-Storage.png'
 import { MdLogout } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
@@ -21,16 +20,6 @@ export const MenuComponent = () => {
                         <Link to={"/consult"} className={styles.button__li}>consultar</Link>
                     </li>
                 </ul>
-            </div>
-
-            <div className={styles.image__background}>
-                <img
-                    className={styles.image__fill}
-                    src={Logo} 
-                    alt="" 
-                    width={300}
-                    height={300}
-                />
             </div>
         </div>
     )
