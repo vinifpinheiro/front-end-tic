@@ -28,3 +28,29 @@
 .image__fill{
     opacity: 10%;
 }
+
+.menu__itens{
+    display: flex;
+    justify-content: center;    
+    align-items: flex-start;
+    position: relative;
+    bottom: 100px;
+}
+
+.ul__menus{
+    display: flex;
+    
+}
+
+.button__li{
+    margin:40px;
+    margin-top: 0px;
+    text-decoration: none;
+    color: $color--text;
+    font-family: $font--title;
+    font-size: 24px;
+}
+
+.button__li:hover{
+    text-decoration: underline;
+}

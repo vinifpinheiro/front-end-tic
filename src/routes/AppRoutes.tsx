@@ -5,6 +5,7 @@ import "../styles/global.scss"
 import { MenuPage } from "../pages/Private/MenuPage"
 import { useContext } from "react"
 import { Header } from "../components/Header"
+import { RegisterPage } from "../pages/Private/RegisterPage"
 
 export const AppRoutes = () => {
     // const Private = ({ children }: { children: any }) => {
@@ -31,6 +32,10 @@ export const AppRoutes = () => {
                 <Route
                     path="/"
                     element={<MenuPage/>}
+                />
+                <Route
+                    path="/register"
+                    element={<RegisterPage/>}
                 />
             </Routes>
             <Routes>

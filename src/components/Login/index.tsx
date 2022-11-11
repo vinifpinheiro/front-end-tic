@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './LoginComponent.module.scss'
-import Logo from '../../images/Icon-Storage.png'
+import Logo from '../../assets/images/Icon-Storage.png'
 
 export const LoginComponent = () => {
     const [userName , setUserName] = useState("")
