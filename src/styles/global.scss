@@ -2,9 +2,9 @@
 
 body{
     background-color: $background--color;
-    background-image: url("../assets/images/Icon-Storage.png"), ;
+    background-image: url("../assets/images/logo-op-10.png"), ;
     background-size: 300px;
-    background-position-x: 630px;
+    background-position-x: 600px;
     background-position-y: 300px;
     opacity: 100%;
     left: 90px;
@@ -14,3 +14,17 @@ body{
 body::before{
     opacity: 0.6;
 }
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: $background--color;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: $color--text;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid $background--color;  /* creates padding around scroll thumb */
+  }
