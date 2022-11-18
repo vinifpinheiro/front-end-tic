@@ -1,12 +1,18 @@
 import styles from './MenuComponent.module.scss'
 import { MdLogout } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/auth';
 
 export const MenuComponent = () => {
+    const { logout } = useContext(AuthContext);
+    const handleLogout = () => {
+        logout();
+    };
     return(
         <div>
             <div className={styles.logout}>
-                <button className={styles.button__logout}>
+                <button onClick={handleLogout} className={styles.button__logout}>
                     <MdLogout size={35}/>
                 </button>
             </div>
