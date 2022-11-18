@@ -7,14 +7,14 @@ import { IGetProduct } from '../../../interfaces/IGetProduct';
 
 export const ConsultProduct = () =>{
     const [idSearch , setIdSearch] = useState("")
-    const [getData , setGetData] = useState<IGetProduct[]>([])
+    const [getProduct , setGetProduct] = useState<IGetProduct[]>([])
     const [verify , setVerify] = useState(Boolean)
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault()
         
-        getData.map((getData) =>{
-            if(getData.name === idSearch){
+        getProduct.map((getProduct) =>{
+            if(getProduct.name === idSearch){
                 setVerify(true)
                 console.log(verify)
             }
@@ -26,15 +26,15 @@ export const ConsultProduct = () =>{
 
     useEffect(()=> {
         apitest.get<IGetProduct[]>('/teste')
-        .then(response => setGetData(response.data))
+        .then(response => setGetProduct(response.data))
     },[])
 
     if(verify === true){
         return(
             <div>
-                {getData.map((getData) =>(
+                {getProduct.map((getProduct) =>(
                     <div>
-                        <h1>{getData.name}</h1>
+                        <h1>{getProduct.name}</h1>
                     </div>
                 ))}
             </div>
