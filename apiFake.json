@@ -1,0 +1,9 @@
+{
+    "teste":[{
+        "name":"teste",
+        "preco": 20
+    }],
+    "ops":[{
+        "ops": 2200
+    }]
+}
