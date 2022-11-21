@@ -1,4 +1,5 @@
 export interface IGetProduct {
-    name: "string"
+    id: number
+    name: string
     preco: 20
 }

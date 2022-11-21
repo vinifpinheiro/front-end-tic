@@ -13,6 +13,7 @@ import { ConsultDemandPage } from "../pages/Private/ConsultPage/ConsultDemand"
 import { ConsultMpPage } from "../pages/Private/ConsultPage/ConsultMp"
 import { useContext } from "react"
 import { AuthContext, AuthProvider } from "../contexts/auth"
+import { RegisterSucessPage } from "../pages/Private/RegisterPage/RegisterSucessPage"
 
 export const AppRoutes = () => {
     const Private = ({ children }: { children: any }) => {
@@ -78,6 +79,15 @@ export const AppRoutes = () => {
                             <Private>
                                 {" "}
                                 <RegisterMPPage/>{" "}
+                            </Private>
+                        }
+                    />
+                    <Route
+                        path="/register/sucess"
+                        element={
+                            <Private>
+                                {" "}
+                                <RegisterSucessPage/>{" "}
                             </Private>
                         }
                     />

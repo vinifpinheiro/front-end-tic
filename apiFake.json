@@ -1,8 +1,13 @@
 {
     "teste":[{
-        "name":"teste",
-        "preco": 20
-    }],
+            "id":1,
+            "name":"teste",
+            "preco": 20
+         },
+        {
+            "id":2,
+            "name":"uai"
+        }],
     "ops":[{
         "ops": 2200
     }]

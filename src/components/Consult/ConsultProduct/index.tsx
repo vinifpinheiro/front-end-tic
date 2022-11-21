@@ -9,6 +9,7 @@ export const ConsultProduct = () =>{
     const [idSearch , setIdSearch] = useState("")
     const [getProduct , setGetProduct] = useState<IGetProduct[]>([])
     const [verify , setVerify] = useState(Boolean)
+    
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault()
@@ -32,9 +33,21 @@ export const ConsultProduct = () =>{
     if(verify === true){
         return(
             <div>
-                {getProduct.map((getProduct) =>(
-                    <div>
-                        <h1>{getProduct.name}</h1>
+                <div className={styles.button__register}>
+                    <Link to={"/register"} className={styles.button__back}>
+                        <BackIcon size={30}/>
+                    </Link>
+                </div>
+                <div className={styles.title__page}>
+                    <h1 className={styles.title__content}>Consultar</h1>
+                </div>
+                <div className={styles.buttons__link}>
+                    <Link className={styles.register__link} to={"/consult"}>Realizar Nova Consulta</Link>
+                    <Link className={styles.register__link} to={"/"}>Voltar ao menu</Link>
+                </div>
+                {getProduct.map((getProduct) => (
+                    <div className={styles.results}>
+                        <h1 key={getProduct.id}>{getProduct.name = idSearch}</h1>
                     </div>
                 ))}
             </div>
@@ -49,14 +62,14 @@ export const ConsultProduct = () =>{
                 </Link>
             </div>
             <div className={styles.title__page}>
-                <h1 className={styles.title__content}>Cadastrar</h1>
+                <h1 className={styles.title__content}>Consultar</h1>
             </div>
             <div className={styles.subtitle__page}>
-                <h1 className={styles.subtitle__content}>Pedido</h1>
+                <h1 className={styles.subtitle__content}>Produto</h1>
             </div>
             <form className={styles.main__form} onSubmit={handleSubmit}>
                 <label className={styles.label__main} htmlFor="">
-                    Nome do Produto:
+                    Id do Produto:
                     <input 
                         className={styles.input__main} 
                         type="text" 

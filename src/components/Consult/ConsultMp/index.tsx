@@ -11,10 +11,10 @@ export const ConsultMp = () => {
                 </Link>
             </div>
             <div className={styles.title__page}>
-                <h1 className={styles.title__content}>Cadastrar</h1>
+                <h1 className={styles.title__content}>Consultar</h1>
             </div>
             <div className={styles.subtitle__page}>
-                <h1 className={styles.subtitle__content}>Pedido</h1>
+                <h1 className={styles.subtitle__content}>Matéria Prima</h1>
             </div>
             <form className={styles.main__form}>
                 <label className={styles.label__main} htmlFor="">
