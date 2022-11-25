@@ -2,57 +2,63 @@ import { Link } from 'react-router-dom'
 import styles from './ConsultProduct.module.scss'
 import { MdArrowBackIosNew as BackIcon , MdDone } from "react-icons/md";
 import { useState , useEffect } from 'react';
-import { apitest } from '../../../services/servicesApi';
+import { api } from '../../../services/servicesApi';
 import { IGetProduct } from '../../../interfaces/IGetProduct';
 
 export const ConsultProduct = () =>{
     const [idSearch , setIdSearch] = useState("")
-    const [getProduct , setGetProduct] = useState<IGetProduct[]>([])
+    const [product , setProduct] = useState<IGetProduct>()
     const [verify , setVerify] = useState(Boolean)
     
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault()
         
-        getProduct.map((getProduct) =>{
-            if(getProduct.name === idSearch){
-                setVerify(true)
-                console.log(verify)
-            }
-            else{
-                console.log("error")
-            }
-        })
+        // getProduct.map((getProduct) =>{
+        //     if(getProduct.Product_ID === idSearch){
+        //         setVerify(true)
+        //         console.log(verify)
+        //     }
+        //     else{
+        //         console.log("error")
+        //     }
+        // })
+        getFetch()
+    }
+
+    function getFetch() {
+        
     }
 
     useEffect(()=> {
-        apitest.get<IGetProduct[]>('/teste')
-        .then(response => setGetProduct(response.data))
-    },[])
+        fetch(`https://testecors.herokuapp.com/product?product_id=${idSearch}`)
+            .then(response => response.json())
+            .then(data => setProduct(data))
+    },[idSearch])
 
-    if(verify === true){
-        return(
-            <div>
-                <div className={styles.button__register}>
-                    <Link to={"/register"} className={styles.button__back}>
-                        <BackIcon size={30}/>
-                    </Link>
-                </div>
-                <div className={styles.title__page}>
-                    <h1 className={styles.title__content}>Consultar</h1>
-                </div>
-                <div className={styles.buttons__link}>
-                    <Link className={styles.register__link} to={"/consult"}>Realizar Nova Consulta</Link>
-                    <Link className={styles.register__link} to={"/"}>Voltar ao menu</Link>
-                </div>
-                {getProduct.map((getProduct) => (
-                    <div className={styles.results}>
-                        <h1 key={getProduct.id}>{getProduct.name = idSearch}</h1>
-                    </div>
-                ))}
-            </div>
-        )
-    }
+    // if(verify === true){
+    //     return(
+    //         <div>
+    //             <div className={styles.button__register}>
+    //                 <Link to={"/register"} className={styles.button__back}>
+    //                     <BackIcon size={30}/>
+    //                 </Link>
+    //             </div>
+    //             <div className={styles.title__page}>
+    //                 <h1 className={styles.title__content}>Consultar</h1>
+    //             </div>
+    //             <div className={styles.buttons__link}>
+    //                 <Link className={styles.register__link} to={"/consult"}>Realizar Nova Consulta</Link>
+    //                 <Link className={styles.register__link} to={"/"}>Voltar ao menu</Link>
+    //             </div>
+    //             <div>
+    //                 {}
+    //             </div>
+    //         </div>
+    //     )
+    // }
+
+    
 
     return(
         <div>
@@ -82,7 +88,11 @@ export const ConsultProduct = () =>{
                     <button type='submit' className={styles.button__confirm}><MdDone size={45} className={styles.button__icon}/></button>
                 </div>
             </form>
-            
+            <div>
+                <h1>
+                    {product.Heigth}
+                </h1>
+            </div>
         </div>
     )
 }
