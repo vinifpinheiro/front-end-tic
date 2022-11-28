@@ -145,3 +145,22 @@
     justify-content: flex-end;
     width: 840px;
 }
+
+.buttons__link{
+    display: flex;
+    justify-content: space-around;
+}
+
+.register__link{
+    font-size: 20px;
+    font-family: $font--title;
+    color: $color--text;
+    text-decoration: none;
+    background-color: $background--header;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+}

@@ -7,19 +7,19 @@ import { IGetDemand } from '../../../interfaces/IGetDemand';
 
 export const ConsultDemand = () =>{
     const [idSearch , setIdSearch] = useState("")
-    const [product , setProduct] = useState<IGetDemand>()
+    const [demand , setDemand] = useState<IGetDemand>()
     const [verify , setVerify] = useState(Boolean)
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault()
-        product.Order_Number === idSearch? setVerify(true): console.log("not validated")
+        demand.Order_Number === idSearch? setVerify(true): console.log("not validated")
     }
     
     useEffect(() =>{
         api
             .get(`/orders?order_id=${idSearch}`)
             .then(response => response.data)
-            .then(data => setProduct(data))
+            .then(data => setDemand(data))
     },[idSearch])
 
     if(verify === true){
@@ -39,10 +39,10 @@ export const ConsultDemand = () =>{
                 </div>
                 <div className={styles.main__results}> 
                     <div className={styles.results}>
-                        <h1 className={styles.results__h1}>Nº do Pedido: <h1 className={styles.results__api}>{product.Order_Number}</h1></h1>
-                        <h1 className={styles.results__h1}>Nº do cliente: <h1 className={styles.results__api}>{product.Client_ID}</h1></h1>
-                        <h1 className={styles.results__h1}>Quantidade: <h1 className={styles.results__api}>{product.Itens_quantity}</h1></h1>
-                        <h1 className={styles.results__h1}>Data do Pedido: <h1 className={styles.results__api}>{product.Date}</h1></h1>
+                        <h1 className={styles.results__h1}>Nº do Pedido: <h1 className={styles.results__api}>{demand.Order_Number}</h1></h1>
+                        <h1 className={styles.results__h1}>Nº do cliente: <h1 className={styles.results__api}>{demand.Client_ID}</h1></h1>
+                        <h1 className={styles.results__h1}>Quantidade: <h1 className={styles.results__api}>{demand.Itens_quantity}</h1></h1>
+                        <h1 className={styles.results__h1}>Data do Pedido: <h1 className={styles.results__api}>{demand.Date}</h1></h1>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@ export const ConsultDemand = () =>{
                 <label className={styles.label__main} htmlFor="">
                     Nº do Pedido:
                     <input className={styles.input__main} 
-                        type="number"
+                        type="text"
                         name='idsearch'
                         value={idSearch}
                         onChange = {(event) => setIdSearch(event.target.value)}
